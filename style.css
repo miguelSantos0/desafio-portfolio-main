@@ -1,0 +1,305 @@
+/* VARIABLES */
+
+:root {
+  --body-bg-color: #22212c;
+  --text-color: #837e9f;
+  --bg-cards: #302f3d;
+  --bg-techs: #cb92b1;
+  --main-font: 'Merriweather Sans', sans-serif;
+}
+
+/* CSS RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+  padding: 20px;
+}
+
+article {
+  box-shadow: 2px 2px 2px rgb(0, 0, 0, 25%);
+}
+
+section:not([class='projects'], [class='studying'], [class='interested']) {
+  background-color: var(--bg-cards);
+  border-radius: 10px;
+  margin-bottom: 16px;
+  padding: 35px 0px;
+
+  text-align: center;
+}
+
+article {
+  background-color: var(--bg-cards);
+  border-radius: 10px;
+  margin-bottom: 16px;
+  padding: 35px 0px;
+}
+
+/* PROFILE */
+
+.profile {
+  height: 45%;
+  min-height: 400px;
+  max-height: 450px;
+}
+
+.profile img {
+  height: 40%;
+  min-height: 230px;
+  max-width: 400px;
+  width: 40%;
+  min-width: 230px;
+  max-width: 400px;
+  border-radius: 100rem;
+  border: 2px solid rgb(34, 255, 82);
+}
+
+h1 {
+  margin: 50px 0 15px;
+  font-size: 1.1rem;
+}
+
+.profile p {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+/* EXTRA INFO */
+
+.links {
+  display: flex;
+  justify-content: center;
+}
+
+.links li,
+.studying li,
+.interested li {
+  list-style: none;
+  font-size: 0.7rem;
+}
+
+.links li {
+  margin: 15px 0px;
+}
+
+.links li,
+a {
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.links a:link,
+.projects-cards a:link {
+  color: var(--text-color);
+}
+
+.links a:visited,
+.projects-cards a:visited {
+  color: var(--text-color);
+}
+
+.icons {
+  width: 8vw;
+  max-width: 28px;
+}
+
+/* ABOUT */
+
+.about h2 {
+  text-align: left;
+  margin-left: 25px;
+}
+
+.about p {
+  margin: 25px 25px;
+  font-size: 0.75rem;
+  font-weight: 400;
+
+  line-height: 2;
+}
+
+/* PROJECTS */
+
+.works {
+  background-color: var(--bg-cards);
+  border-radius: 10px;
+  margin-bottom: 16px;
+  padding: 20px 17px 20px 17px;
+  text-align: left;
+  box-shadow: 2px 2px 2px rgb(0, 0, 0, 25%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.projects {
+  background-color: var(--bg-cards);
+  border-radius: 10px;
+  margin-bottom: 16px;
+  padding: 20px 17px 20px 17px;
+  text-align: left;
+  box-shadow: 2px 2px 2px rgb(0, 0, 0, 25%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.projects-cards a {
+  border-radius: 10px;
+  box-shadow: inset 3px 3px 0px var(--bg-techs);
+  padding: 20px;
+  text-align: center;
+}
+
+/* TECHNOLOGIES */
+
+.studying,
+.interested {
+  background-color: var(--bg-cards);
+  border-radius: 10px;
+  margin-bottom: 16px;
+  padding: 35px 0px;
+}
+
+.studying ul,
+.interested ul {
+  margin-top: 18px;
+
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.studying li,
+.interested li {
+  background-color: var(--bg-techs);
+  border-radius: 30px;
+  padding: 6px 9px;
+  color: black;
+  font-weight: 700;
+  font-size: 0.625rem;
+  text-align: center;
+  width: 100%;
+  max-width: 150px;
+}
+
+.studying h2,
+ul,
+.interested h2,
+ul {
+  margin: 0px 17px;
+}
+
+/* MEDIAS */
+
+@media (min-width: 540px) {
+  .studying ul,
+  .interested ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    display: grid;
+    column-gap: 16px;
+    grid-template-areas:
+      'profile projects'
+      'links about'
+      'studying about'
+      'interested about';
+  }
+
+  .profile {
+    grid-area: profile;
+  }
+
+  .projects {
+    grid-area: projects;
+  }
+
+  .links {
+    grid-area: links;
+  }
+
+  .about {
+    grid-area: about;
+    height: 310px;
+  }
+
+  .studying {
+    grid-area: studying;
+  }
+
+  .interested {
+    grid-area: interested;
+  }
+
+  .about p {
+    font-size: 0.9rem;
+  }
+
+  .studying ul,
+  .interested ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 7000px) {
+  .profile h1 {
+    font-size: 1.4rem;
+  }
+
+  .profile p {
+    font-size: 1rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+    line-height: 2.5;
+  }
+
+  .interested ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .studying li,
+  .interested li {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .links li {
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  .about p {
+    font-size: 1.1rem;
+  }
+
+  .projects {
+    gap: 40px;
+  }
+
+  .interested ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
