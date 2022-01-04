@@ -46,18 +46,25 @@ article {
 /* PROFILE */
 
 .profile {
-  width: clamp(400px, 45%, 450px);
+  height: 45%;
+  min-height: 400px;
+  max-height: 450px;
 }
 
 .profile img {
-  height: clamp(230px, 40%, 400px);
-  width: clamp(230px, 40%, 400px);
+  height: 40%;
+  min-height: 220px;
+  max-height: 400px;
+  width: 40%;
+  min-width: 210px;
+  max-width: 400px;
+ 
   border-radius: 100rem;
   border: 2px solid rgb(34, 255, 82);
 }
 
 h1 {
-  margin: 50px 0 15px;
+  margin: 35px 0 15px;
   font-size: 1.1rem;
 }
 
