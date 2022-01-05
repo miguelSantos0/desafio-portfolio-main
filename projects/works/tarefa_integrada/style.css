@@ -1,0 +1,8 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    border: 1px black solid;
+}
