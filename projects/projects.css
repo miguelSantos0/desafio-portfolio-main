@@ -1,70 +1,77 @@
-/* VARIABLES */
+  /* VARIABLES */
 
 :root {
-    --body-bg-color: #22212c;
-    --text-color: #837e9f;
-    --bg-cards: #302f3d;
-    --bg-techs: #cb92b1;
-    --main-font: 'Merriweather Sans', sans-serif;
-  }
-  
+  --body-bg-color: #22212c;
+  --text-color: #837e9f;
+  --bg-cards: #302f3d;
+  --bg-techs: #cb92b1;
+  --main-font: 'Merriweather Sans', sans-serif;
+}
+
   /* CSS RESET */
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: var(--main-font);
-    background-color: var(--body-bg-color);
-    color: var(--text-color);
-    padding: 20px 30px;
-  }
 
-  h2 {
-      text-align: center;
-      margin: 20px 0px 40px;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .cards a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: var(--text-color);
-    background-color: var(--bg-cards);
-    border-radius: 10px;
-    margin-bottom: 16px;
-    padding: 35px 0px;
-    text-align: center;
-    height: 230px;   
-    transition: .4s;
-  }
+body {
+  font-family: var(--main-font);
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+  padding: 20px 30px;
+}
 
-  .cards a:hover {
-      letter-spacing: .8px;
-      transition: .4s;
-  }
+h2 {
+  text-align: center;
+  margin: 20px 0px 40px;
+}
 
-  section p {
-      display: inline;
-      padding: 20px;
-      border-radius: 2px;
-      border-bottom: solid var(--text-color) 2px;
-  }
+.cards a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: var(--bg-cards);
+  border-radius: 10px;
+  margin-bottom: 16px;
+  padding: 35px 0px;
+  text-align: center;
+  height: 250px;   
+  transition: .4s;
+}
+
+.cards a:hover {
+  letter-spacing: .4px;
+  transition: .4s;
+}
+
+.cards p {
+  display: inline;
+  padding: 20px;
+  border-radius: 2px;
+  border-bottom: solid var(--text-color) 2px;
+}
+
+.cards span {
+  font-size: .8rem;
+  position: relative;
+  top: 55px;
+}
 
   /* MEDIAS QUERIES */
 
-  @media (min-width: 600px) {
-    section {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 20px;
-        padding: 0px 40px;
-    }
+@media (min-width: 600px) {
+  section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 0px 40px;
   }
+}
 
 @media (min-width: 1000px) {
   section {
@@ -72,5 +79,5 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     padding: 0px 40px;
-}
+  }
 }
