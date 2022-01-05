@@ -149,7 +149,7 @@ a {
   background-color: var(--bg-cards);
   border-radius: 10px;
   margin-bottom: 16px;
-  padding: 20px 17px 20px 17px;
+  padding: 25px 17px 25px 17px;
   text-align: left;
   box-shadow: 2px 2px 2px rgb(0, 0, 0, 25%);
 
@@ -158,11 +158,30 @@ a {
   gap: 25px;
 }
 
+.projects h2 {
+  margin: 10px 0px 20px 0px;
+}
+
 .projects-cards a {
+  display: flex;
+  justify-content: space-between;
   border-radius: 10px;
   box-shadow: inset 3px 3px 0px var(--bg-techs);
-  padding: 20px;
+  margin: 0px 20px 0px 0px;
+  padding: 25px 20px;
   text-align: center;
+  transition: .5s;
+}
+
+.projects-cards a:hover {
+  letter-spacing: .3px;
+  color: var(--bg-techs);
+  transition: .5s;
+  margin: 0px 0px 0px 0px;
+}
+
+span {
+  margin: 0px 20px;
 }
 
 /* TECHNOLOGIES */
