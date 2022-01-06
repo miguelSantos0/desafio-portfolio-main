@@ -68,16 +68,23 @@ h2 {
   section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    grid-gap: 15px;
     padding: 0px 40px;
+    
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1020px) {
   section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    padding: 0px 40px;
+  }
+}
+
+@media (min-width: 1900px) {
+  section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
   }
 }
