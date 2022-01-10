@@ -1,0 +1,162 @@
+:root {
+  --main-font: 'Poppins', sans-serif;
+  --background: #E14B4B;
+}
+
+/* CSS RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: white;
+  font-family: var(--main-font);
+  text-align: center;
+}
+
+main {
+  height: 100vh;
+
+  display: grid;
+  grid-template-areas: 
+  'ornament ornament'
+  'title title'
+  'countdown countdown'
+  'santa-claus tree';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr .5fr 1fr 1fr;
+}
+
+img[alt*="ornament"] {
+  grid-area: ornament;
+  justify-self: flex-end;
+
+  width: clamp(128px, 40%, 300px);
+}
+
+span {
+  display: none;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 4vh, 4rem);
+  font-weight: 500;
+
+  grid-area: title;
+}
+
+.countdown {
+  grid-area: countdown;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 5vh, 6rem);
+  font-weight: 300;
+}
+
+p {
+  font-size: clamp(.7rem, 1.5vh, 1.8rem);
+  font-weight: 300;
+}
+
+img[alt*="Santa"] {
+  width: clamp(150px, 70%, 250px);
+  margin-bottom: 10px;
+
+  grid-area: santa-claus;
+  align-self: end;
+}
+
+img[alt*="tree"] {
+  width: clamp(70px, 30%, 100px);
+  margin-bottom: 10px;
+  margin-right: 5px;
+
+  grid-area: tree;
+  align-self: end;
+  justify-self: end;
+}
+
+/* MEDIAS */
+
+@media (min-width: 540px) {
+  h1 {
+    margin-bottom: 50px;
+  }
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+  }
+
+  h2 {
+    display: inline;
+  }
+
+  span {
+    display: inline;
+    font-size: clamp(1.5rem, 1vh, 4rem);
+    margin: 0 30px;
+    position: relative;
+    top: 10px;
+  } 
+}
+
+@media (min-width: 600px) {
+  span {
+    top: calc(5vh / 2);
+  }
+}
+
+@media (min-width: 1024px) and (max-height: 600px), (min-width: 1280px) {
+  img[alt*="ornament"] {
+    width: 220px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  span {
+    top: 35px;
+  }
+
+  img[alt*="Santa"] {
+    width: 170px;
+  }
+
+  img[alt*="tree"] {
+    width: 80px;
+  }
+}
+
+@media (min-width: 1366px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 6rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+  }
+
+  span {
+    top: 30px;
+    font-size: 4rem;
+  }
+}
