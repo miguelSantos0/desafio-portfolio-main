@@ -52,14 +52,15 @@ article {
 }
 
 .profile img {
-  height: 40%;
+  height: 50%;
   min-height: 220px;
   max-height: 400px;
-  width: 40%;
+  width: 70%;
+  border-radius: 100rem;
   min-width: 210px;
   max-width: 400px;
  
-  border-radius: 100rem;
+  
   border: 2px solid rgb(34, 255, 82);
 }
 
